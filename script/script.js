@@ -29,6 +29,7 @@ registerUser.addEventListener('click', () => {
       name,
       regData;
       
+  function innerRegData(){
       do {
         name = prompt('Введите ваше имя и фамилию', 'gtf zzd');
       } while (!name || name === '');
@@ -52,16 +53,18 @@ registerUser.addEventListener('click', () => {
       localArr.push({firstName, lastName, login, password, regData});
     } else {
       alert('Введите имя и фамилию корректно');
-      return regData();
+      return innerRegData();
     }
-  return render();
+    return render();
+  }
+  innerRegData();
 });
 
 login.addEventListener('click', ()=> {
   let loginReg,
       passwordReg,
       nameReg;
-      
+
       do {
       nameReg = prompt('Введите ваше имя и фамилию', 'gtf zzd');
       } while (!nameReg || nameReg === '');
