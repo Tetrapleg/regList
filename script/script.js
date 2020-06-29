@@ -65,6 +65,7 @@ login.addEventListener('click', ()=> {
       passwordReg,
       nameReg;
 
+  function innerAutorizatedData(){
       do {
       nameReg = prompt('Введите ваше имя и фамилию', 'gtf zzd');
       } while (!nameReg || nameReg === '');
@@ -88,9 +89,11 @@ login.addEventListener('click', ()=> {
       }
     } else {
       alert('Введите имя и фамилию корректно');
-      return ;
+      return innerAutorizatedData();
     }
-  return render();
+    return render();
+  }
+  innerAutorizatedData();
 });
 
 const render = function() {
